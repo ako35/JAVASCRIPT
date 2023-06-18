@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        const salary = "3000";
+        const name = "Ahmet";
+        const company = "Google";
+
+        let fullName = name + " " + salary + " " + company;
+        console.log(fullName);
+
+        // backtick isareti kullanarak yazdir.
+        fullName = `${name} ${salary} ${company}`;
+        console.log(fullName);
+
+        const paragraf = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus molestias, provident, possimus nisi ratione iste repudiandae neque illo esse debitis error sequi laborum, quasi aut rem delectus. Incidunt, ipsam quia!
+        Consequatur dignissimos dolores, optio iste corporis beatae id quod, explicabo modi molestias omnis quo ipsam cupiditate magni. Itaque delectus ratione quam natus optio sit porro mollitia, sunt at iusto repellendus.
+        Sunt, commodi! Natus sed commodi similique dicta laboriosam. Tenetur, amet! Laboriosam hic praesentium quibusdam quam? Quia aspernatur laudantium vitae quis ducimus, odit tempore quam totam eum eaque alias perspiciatis at!
+        Optio enim et similique, perspiciatis molestias fuga incidunt! Nostrum officia tempore, praesentium iure amet tempora ullam, quia quae, sunt veniam debitis? Dolore expedita tempore eos exercitationem, quidem enim odio? Porro.`;
+        console.log(paragraf);
+
+        let html = `
+            <div>
+                <h2>Title</h2>
+                <p>lorem</p>
+            </div>`
+        document.write(html);
+
+    </script>
+    
+</body>
+</html>
