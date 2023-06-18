@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        let x = false;
+        let y = true;
+        let z = true;
+        let t = "false";
+        let m = "kedi";
+        let n = "kus";
+        let k = "";
+
+        const comp1 = y && x && z;
+        console.log(comp1);
+
+        const comp2 = x || t;
+        console.log(comp2);
+
+        const comp3 = y && z && m;
+        console.log(comp3);
+
+        const comp4 = m && y && z;
+        console.log(comp4);
+
+        const comp5 = m && y && x && z;
+        console.log(comp5);
+
+        // const result = !x && z && m && alert("Merhaba");
+        // console.log(result);
+
+        // const result2 = x || !t || !z || alert("Merhaba");
+        // console.log(result2);
+
+        // const result3 = "";
+        // result3 || alert("Merhaba");
+
+        console.log(x || k || null);
+
+    </script>
+    
+</body>
+</html>

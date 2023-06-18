@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        // Value Type
+        // Javascript te string, number, bigint ve boolean data tipleri value type dir.
+
+        let x = 5;
+        let y = x;
+
+        console.log(x===y);
+
+        let name1 = "Ali";
+        let name2 = name1;
+
+        console.log(name1===name2);
+
+        name2 = "Ahmet";
+        console.log(name1===name2);
+
+        // Reference Type
+        // Javascript te object ve array data tipleri reference type dir.
+
+        let obj1 = {
+            name: "Ali",
+            age: 20,
+            city: "Ankara",
+        }
+
+        let obj2 = {
+            name: "Ali",
+            age: 20,
+            city: "Ankara",
+        }
+
+        let obj3 = obj1;
+
+        console.log(obj1===obj2);
+        console.log(obj1===obj3);
+        // obj3 = obj1; bu sekilde yeni bir obje olusturmus olmayiz
+        // ayni objelerdir adresleri farklidir sadece
+        // birinde bir degisiklik yaptigimizda digerinde de degisiklik olur
+
+        obj1.name = "Ahmet";
+        console.log(obj1);
+        console.log(obj3);
+
+        console.log(typeof null);
+
+        console.log({}==={});
+        console.log([]===[]);
+        console.log(null===null);
+
+        
+
+    </script>
+    
+</body>
+</html>
