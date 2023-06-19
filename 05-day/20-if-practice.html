@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="number" id="txtPrice" placeholder="Type the price">
+    <button onclick="calculateButtonClick()">Calculate</button>
+
+    <h2 id="result"></h2>
+
+    <script>
+
+        function calculateButtonClick(){
+            const txtPriceElement = document.querySelector("#txtPrice");
+            let resultElement = document.querySelector("#result");
+
+            if(txtPriceElement.value > 500){
+                resultElement.innerHTML = txtPriceElement.value - txtPriceElement.value * 15 / 100;
+            }
+            
+        }
+
+        function calculateButtonClick1() {
+            let price = document.getElementById("txtPrice").value;
+            let result = document.getElementById("result");
+            result.innerHTML = "The price is " + price;
+        }
+
+    </script>
+    
+</body>
+</html>

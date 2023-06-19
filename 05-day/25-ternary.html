@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ternary</title>
+</head>
+<body>
+
+    <input type="number" id="txtSalary" oninput="setSalary()">
+
+    <input type="radio" name="status" id="rdRetired" onchange="setSalary()" value="retired" checked>
+    <label for="rdRetired"> Emekli </label>
+
+    <input type="radio" name="status" id="rdEmployee" onchange="setSalary()" value="employee">
+    <label for="rdEmployee"> Calisan </label>
+    
+    <h2 id="result"></h2>
+
+    <script>
+
+        const txtSalaryElement = document.querySelector('#txtSalary');
+        const resultElement = document.querySelector('#result');
+        
+
+        function setSalary() {
+            const statusElement = document.querySelector('input[name="status"]:checked');
+            let salary = txtSalaryElement.value;
+            salary = statusElement.value === 'retired' ? salary * 0.9 : salary * 0.95;
+            resultElement.innerHTML = salary;
+        }
+
+    </script>
+</body>
+</html>
