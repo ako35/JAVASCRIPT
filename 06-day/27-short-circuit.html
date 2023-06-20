@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        const x = 5;
+        const y = 4;
+        const z = 14;
+
+        // And example
+        console.log(x > y && z > y && y == 4);
+        console.log(x > y && z > y && y);
+        console.log(x > y && y > z && y);
+
+        // z > 5 && z < 25 && alert("Bravo super bir giris");
+
+        // x === 5 && z > 5 && alert('Message 2');
+
+        // Or example
+        console.log(x > y || z > y || y == 4);
+        console.log(x > y || z > y || y);
+        console.log(x < y || y > z || y);
+        console.log(x < y || y > z || y ==2);
+
+        // short circuit
+        // y === 35 || alert("Izmir plaka degil");
+
+        // ornek 1
+        let isLoggedIn = true;
+        let userName = "";
+
+        (isLoggedIn || userName !== "") && console.log('Kullanici girisi yapildi veya kullanici adi girildi');
+
+        // ornek 2
+        let isAvailable = true;
+        let isOnSale = false;
+        (isAvailable || !isOnSale) && console.log('Urun mevcut veya indirimli');
+
+    </script>
+    
+</body>
+</html>

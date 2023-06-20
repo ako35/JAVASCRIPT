@@ -27,7 +27,7 @@
             const statusElement = document.querySelector('input[name="status"]:checked');
             let salary = txtSalaryElement.value;
             salary = statusElement.value === 'retired' ? salary * 0.9 : salary * 0.95;
-            resultElement.innerHTML = salary;
+            resultElement.innerHTML = salary.toFixed(2);
         }
 
     </script>

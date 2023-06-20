@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        const user = {
+            name: 'John',
+            age: 30,
+            salary:{
+                amount: 1000,
+                currency: 'USD',
+                tax: 15
+            }
+        }
+
+        console.log(user);
+        console.log(user.age);
+        console.log(user.salary.tax);
+        console.log(user.salary.abc);
+        console.log(user.address);
+        console.log(user.address?.city.name);
+    </script>
+    
+</body>
+</html>
