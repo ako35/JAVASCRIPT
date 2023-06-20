@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form action="">
+        <input type="text" id="txtNum" name="name" />
+        <button onclick="setPrice()">Set Price</button>
+    </form>
+
+    <script>
+
+        const getPrice = (price, discountRate, taxRate) => {
+            if (!price || isNaN(price) || price < 0) return;
+            if (!discountRate || isNaN(discountRate)) discountRate = 0;
+            if (!taxRate || isNaN(taxRate)) taxRate = 0;
+
+            if (price > 1500) discountRate += 10;
+            if (discountRate <= 0) taxRate = 0;
+
+            const totalTax = price * taxRate / 100;
+            const totalDiscount = price * discountRate / 100;
+            const total = price - totalDiscount + totalTax;
+            return total;
+        }
+
+        const price = getPrice(5300, 10, 5);
+        console.log(price);
+
+    </script>
+
+</body>
+
+</html>
