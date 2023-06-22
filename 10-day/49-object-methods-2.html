@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        const car1 = {
+            brand: 'Audi',
+            model: 'A4',
+            color: 'red',
+            model: 'A6'
+        }
+        console.log(car1.model);
+
+        const car2 = {
+            brand: 'Mercedes',
+            year: 2023
+        }
+
+        Object.assign(car1, car2);
+        console.log(car1);
+
+        // bir nesneden tamamen bagimsiz yeni bir nesne olusturmak icin
+        // yani kopya olusturmak icin (shallow copy) Object.assign kullanilir.
+
+        const car3 = Object.assign({}, car1, car2);
+        console.log(car3);
+    </script>
+    
+</body>
+</html>

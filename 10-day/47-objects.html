@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="test1">Hello 1</div>
+    <div id="test2">Hello 2</div>
+
+    <script>
+        const employee = {
+            firstName: 'Ali',
+            lastName: 'Mammadov',
+            birthDate: '01.01.2000',
+            salary: 10000,
+            department: {
+                name: 'IT',
+                location: 'Istanbul'
+            },
+            increaseSalary: function(amount){
+                if(amount>3000) return;
+                this.salary += amount;
+            },
+            displayName: function(){
+                return `${this.firstName} ${this.lastName}`
+            }
+        }
+
+        console.log(employee);
+        console.log(employee.salary);
+        console.log(employee.department.location);
+        employee.increaseSalary(500);
+        console.log(employee.salary);
+        console.log(employee.displayName());
+
+        console.log(this);
+
+        const test = () => {
+            console.log(this);
+        }
+
+        test();
+        console.log(this);
+
+// event handler normal function olarak tanimlanirsa this ifadesi olayin oldugu elemente referans verir.
+        document.querySelector('#test1').addEventListener('click', function(e) {
+            alert('Hello1');
+            console.log(e.target);
+            console.log(this.innerText);
+        })
+
+// event handler arrow function olarak tanimlanirsa this ifadesi window nesnesine referans verir.
+        document.querySelector('#test2').addEventListener('click', (e) => {
+            alert('Hello2');
+            console.log(e.target);
+            
+        })
+
+    </script>
+    
+</body>
+</html>
