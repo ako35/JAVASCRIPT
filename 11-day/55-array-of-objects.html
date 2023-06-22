@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <select name="" id="ddlStudents"></select>
+
+    <script>
+        const students = [
+        {
+            name: 'Ali',
+            surname: 'Gel',
+            age: 20,
+            gender: 'male'
+        },
+        {
+            name: 'Ahmet',
+            surname: 'Gel',
+            age: 20,
+            gender: 'male'
+        },
+        {
+            name: 'Mehmet',
+            surname: 'Gel',
+            age: 20,
+            gender: 'male'
+        }
+        ];
+
+        const fillStudents = () => {
+            const ddlSudents = document.querySelector("#ddlSudents");
+
+            for(let i=0;i<students.length;i++){
+                ddlSudents.innerHTML+=`<option>${students[i]}</option>`;
+            }
+        }
+
+        fillStudents();
+    </script>
+    
+</body>
+</html>
