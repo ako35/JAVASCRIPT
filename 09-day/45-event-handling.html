@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button id="btnSayHello1" onclick="sayHello1()">Say Hello</button>
+    <button id="btnSayHello2">Say Hello 2</button>
+    <button id="btnSayHello3">Say Hello 3</button>
+    <button id="btnSayHello4">Say Hello 4</button>
+    <button id="btnSayHello5">Say Hello 5</button>
+
+    <script>
+
+        // 1. method
+        function sayHello1() {
+            alert('Hello');
+        }
+
+        // 2. method
+        const sayHello2 = function () {
+            alert('Hello2');
+        }
+
+        document.querySelector('#btnSayHello2').onclick = sayHello2;
+
+        // 3. method
+        document.querySelector('#btnSayHello3').onclick = (e) => {
+            console.log(e);
+            alert('Hello3');
+        }
+
+        // 4. method
+        const sayHello4 = function () {
+            alert('Hello4');
+        }
+
+        document.querySelector('#btnSayHello4').addEventListener('click', sayHello4)
+
+        // 5. method
+        document.querySelector('#btnSayHello5').addEventListener('click', () => {
+            alert('Hello5');
+        })
+    </script>
+
+</body>
+
+</html>
