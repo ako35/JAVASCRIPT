@@ -1,4 +1,4 @@
-import {countries} from '../data/countries';
+import {countries} from '../data/countries.js';
 
 const loadData = () => {
     let options='';

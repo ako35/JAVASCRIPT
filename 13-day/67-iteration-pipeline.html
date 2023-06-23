@@ -21,17 +21,10 @@
             { id: 10, name: 'speaker', price: 150 },
         ];
 
-        console.log(products.map(t=>t.price>5000))
-
-        console.log(products.filter(t=>t.price>5000));
-
-        const filterProducts = (prefix) => {
-            return products.filter(product => product.name.startsWith(prefix));
-          }
-
-        console.log(filterProducts('m'));
-
-        
+        console.log(products.filter(t=>t.price>500).map(t=>{
+            t.price*=1.15
+            return t
+        }).forEach(t=>console.log(t)))
     </script>
     
 </body>

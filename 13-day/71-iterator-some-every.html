@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        const prices=[12,454,2342,34,4532,657,89,67,987];
+
+        if(prices.every((price) => price>0)){
+            console.log('All prices are positive');
+        }
+
+        if(prices.some ((price) => price<0)){
+            console.log('Some prices are negative');
+        }
+    </script>
+    
+</body>
+</html>
