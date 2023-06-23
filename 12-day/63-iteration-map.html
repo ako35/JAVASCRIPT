@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        const animals = ['fil','kus','deve','aslan','fare','kartal'];
+
+        animals.map(t => console.log(t.slice(0,2)));
+
+        const newAnimals = animals.map(animal=>{
+            if(animal.startsWith('k')){
+                return animal.toUpperCase();
+            }
+            else{
+                return '-' +animal;
+            }
+        });
+
+        console.log(newAnimals);
+        console.log(newAnimals===animals);
+    </script>
+    
+</body>
+</html>

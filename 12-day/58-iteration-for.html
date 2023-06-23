@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        const arr = [12, 32, 54, 65, 76, 87, 64, 37, -3, -12, -78, -28, -42];
+
+        const calculate = (arrParam) => {
+            let sumP = 0;
+            let sumN = 0;
+
+            for (let i = 0; i < arrParam.length; i++) {
+                if (arrParam[i] > 0) {
+                    sumP += arrParam[i];
+                }
+                else {
+                    sumN += arrParam[i];
+                }
+            }
+            return sumP - sumN;
+        }
+        console.log(calculate(arr));
+    </script>
+
+</body>
+
+</html>
