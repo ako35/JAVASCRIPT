@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1 id="welcomeText">Welcome to my web app</h1>
+
+    <article></article>
+
+    <p class="contact">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla magnam autem quis sed est veritatis totam soluta aspernatur quaerat quidem enim aliquam at vitae, alias odio voluptatum expedita quas exercitationem?
+    </p>
+
+    <script>
+        const welcomeTextEl=document.getElementById('welcomeText');
+        welcomeTextEl.innerHTML+='.'
+
+        // getElementsByTagName her zaman dizi doner
+        const articleEl=document.getElementsByTagName('article');
+        articleEl[0].innerHTML+='.'
+
+        // getElementsByClassName her zaman dizi doner
+        const contactEls=document.getElementsByClassName('contact');
+        contactEls[0].innerHTML+='.'
+    </script>
+    
+</body>
+</html>

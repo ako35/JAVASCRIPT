@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <header>
+        <h1>DOM</h1>
+    </header>
+
+    <main>
+        <ul id="employeeList" class="list">
+            <li>Lorem. <span> => </span></li>
+            <li>Voluptatem! <span> => </span></li>
+            <li>Dolorum! <span> => </span></li>
+            <li>Nostrum! <span> => </span></li>
+            <li>Dignissimos. <span> => </span></li>
+        </ul>
+    </main>
+
+    <script>
+        const spanEls=document.querySelectorAll('main ul.list li span');
+
+        spanEls.forEach(t=>{
+            t.addEventListener('click',(e)=>{
+                // t.parentElement.remove();
+
+                // closest parentina gider arar.
+                const li =e.target.closest('li');
+                li.style.background='yellow';
+            })
+        })
+
+        const header=document.querySelector('.list li:nth-child(4)').closest('body').querySelector('header');
+        console.log(header);
+
+        // children
+        const employeeList=document.getElementById('employeeList');
+        console.log(employeeList.children);
+
+        // childNodes icinde yorum satilarini ve enter lari dahi gosterir.
+        console.log(employeeList.childNodes);
+
+        console.log(employeeList.firstElementChild);
+        console.log(employeeList.lastElementChild);
+        console.log(employeeList.parentElement.parentElement);
+    </script>
+    
+</body>
+</html>
