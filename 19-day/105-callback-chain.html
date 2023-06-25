@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        const siparisVer = (callback) => {
+            console.log('Sipariş verildi');
+            setTimeout(() => {
+                console.log('Sipariş hazir');
+                callback();
+            },3000);
+        }
+
+        const yemekYe = (callback) => {
+            console.log('Yemege basladik');
+            setTimeout(() => {
+                console.log('Yemek yendi');
+                callback();
+            },2000);
+        }
+
+        const filmIzle = () => {
+            console.log('Film basladi');
+            setTimeout(() => {
+                console.log('Film bitti');
+            },2000);
+        }
+
+        const patlakMisirYe = () => {
+            console.log('Patlak misir yemege basladik');
+            setTimeout(() => {
+                console.log('Patlak misir bitti');
+            },1000);
+        }
+
+        siparisVer(() => {
+            yemekYe(() => {
+                filmIzle();
+                patlakMisirYe();
+            });
+        });
+
+    </script>
+    
+</body>
+</html>

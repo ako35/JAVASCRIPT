@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        const getDistance = (c1, c2, callback) => {
+            setTimeout(() => {
+                const distance = c1 - c2;
+                callback(distance)
+            }, 3000);
+        }
+
+        console.log('Sayilarin toplami: ');
+
+        const x = (distance) => {
+            console.log(distance);
+        }
+
+        getDistance(5, 8, x);
+
+        console.log('Merhaba'); 
+        
+    </script>
+    
+</body>
+</html>
