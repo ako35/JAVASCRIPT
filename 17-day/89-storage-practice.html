@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1 id="lblWelcomeMessage"></h1>
+    <p><em id="lblCounter"></em></p>
+
+    <form action="">
+        <input type="text" id="txtName" placeholder="Enter your name">
+        <button id="btnSave">Save</button>
+    </form>
+
+    <script>
+        const handleCounter = () => {
+            let count = localStorage.getItem('pageCounter');
+            // count=count ? parseInt(count) : 0; // ternary operator
+
+            // count = count ?? 0; // nullish coalescing operator
+
+            count ??= 0; // sorted by nullish coalescing operator
+
+            count++;
+            localStorage.setItem('pageCounter', count);
+
+            document.getElementById('lblCounter').innerHTML = `Uygulamamiza ${count}. kere giris yaptiniz.`;
+
+        }
+
+        document.getElementById('btnSave').addEventListener('click', () => {
+            const txtName = document.getElementById('txtName').value;
+            localStorage.setItem('name', txtName);
+        });
+
+        const handleMessage = () => {
+            const name = localStorage.getItem('name');
+            document.getElementById('lblWelcomeMessage').innerHTML = `Welcome ${name || 'Guest'}`;
+        }
+
+        handleCounter();
+        handleMessage();
+    </script>
+
+</body>
+
+</html>

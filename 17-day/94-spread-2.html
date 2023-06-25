@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        let cities = ['Istanbul','Ankara','Izmir','Konya','Adana'];
+        console.log(cities);
+
+        cities = [...cities,'Erzurum'];
+        console.log(cities);
+
+        let cities2 = ['Istanbul','Ankara','Izmir','Konya','Adana'];
+        let cities3 = ['Istanbul','Ankara','Izmir','Konya','Adana'];
+        let cities4 = [...cities2,...cities3];
+        console.log(cities4);
+
+        // tekrar eden elemanları silmek
+        let cities5 = [...new Set(cities4)]; // unique hale getirmis olduk
+        console.log(cities5);
+
+    </script>
+    
+</body>
+</html>

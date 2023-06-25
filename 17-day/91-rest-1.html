@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        const sum1 = (a,b)=>{
+            return a+b;
+        }
+
+        console.log(sum1(5,8));
+
+        const sum2 = (...args)=>{
+            return args.reduce((a,b)=>a+b,0);
+        }
+
+        console.log(sum2(5,8,9));
+    </script>
+    
+</body>
+</html>

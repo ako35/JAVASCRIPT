@@ -6,8 +6,8 @@ const date = new Date();
 const hours = date.getHours();
 const minutes = date.getMinutes();
 const seconds = date.getSeconds();
-hourEl.innerHTML = hours.length===1 ? `0${hours}` : hours;
-minuteEl.innerHTML = minutes.length===1 ? `0${minutes}` : minutes;
+hourEl.innerHTML = hours.toString().length===1 ? `0${hours}` : hours;
+minuteEl.innerHTML = minutes.toString().length===1 ? `0${minutes}` : minutes;
 secondEl.classList.toggle('hidden');
 
 setInterval(() => {
@@ -15,8 +15,8 @@ setInterval(() => {
     const hours = date.getHours();
     const minutes = date.getMinutes();
     const seconds = date.getSeconds();
-    hourEl.innerHTML = hours.length===1 ? `0${hours}` : hours;
-    minuteEl.innerHTML = minutes.length===1 ? `0${minutes}` : minutes;
+    hourEl.innerHTML = hours.toString().length===1 ? `0${hours}` : hours;
+    minuteEl.innerHTML = minutes.toString().length===1 ? `0${minutes}` : minutes;
     secondEl.classList.toggle('hidden');
 },1000);
 
