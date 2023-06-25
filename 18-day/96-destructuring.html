@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        const person = {
+            name: 'Ali',
+            lastName: 'Gel',
+            age: 25,
+            eyeColor: 'blue',
+            department: {
+                address: 'Istanbul',
+                departmentName: 'IT',
+                manager: 'Ahmet'
+            }
+        }
+
+        const {name, lastName, age, eyeColor, department} = person;
+        
+        const {address, departmentName, manager} = department;
+
+        console.log(name);
+        console.log(lastName);
+        console.log(age);
+        console.log(eyeColor);
+        console.log(department);
+
+        console.log(address);
+        console.log(departmentName);
+        console.log(manager);
+    </script>
+    
+</body>
+</html>
