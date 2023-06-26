@@ -1,6 +1,14 @@
-import { searchShows, getShowDetails } from "./tvmaze-api.js";
+import { searchShows } from "./tvmaze-api.js";
+
+const lstTvShows = document.getElementById('lstTvShows');
 
 let timeoutSearch=null;
+
+lstTvShows.addEventListener('click', (e) => {
+    const selectedCard = e.target.closest('.card');
+    const showId = selectedCard.dataset.show;
+    location.href = `107-tvshow-details.html?id=${showId}`;
+})
 
 document.getElementById('txtSearch').addEventListener('input', (e) => {
     if (timeoutSearch) clearTimeout(timeoutSearch);
@@ -14,7 +22,6 @@ document.getElementById('txtSearch').addEventListener('input', (e) => {
 });
 
 const createMovies = (shows) => {
-    const lstTvShows = document.getElementById('lstTvShows');
 
     lstTvShows.innerHTML = '';
 
@@ -25,7 +32,7 @@ const createMovies = (shows) => {
 }
 
 const createMovieCard = (item) => {
-    const {image, name, genres} = item.show;
+    const {image, name, genres, id} = item.show;
 
     let movieImage='../../assets/img/noimage.png';
 
@@ -34,7 +41,7 @@ const createMovieCard = (item) => {
     }
     return `
             <div class="col">
-                <div class="card h-100">
+                <div class="card h-100" style='cursor:pointer' data-show="${id}">
                     <img src="${movieImage}" class="card-img-top" alt="${name}">
                     <div class="card-body">
                         <h5 class="card-title">${name}</h5>

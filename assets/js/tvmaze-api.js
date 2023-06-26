@@ -6,7 +6,6 @@ const searchShows = (query, callback) => {
     fetch(url)
         .then((response) => response.json())
         .then((data) => {
-            console.log(data);
             callback(data);
         })
         .catch((error) => {
@@ -14,8 +13,17 @@ const searchShows = (query, callback) => {
         })
 }
 
-const getShowDetails = () => {
-    
+const getShowDetails = (showId, callback) => {
+    const url = `${baseUrl}/shows/${showId}`;
+
+    fetch(url)
+        .then((response) => response.json())
+        .then((data) => {
+            callback(data);
+        })
+        .catch((error) => {
+            console.log(error);
+        })
 }
 
 export {
